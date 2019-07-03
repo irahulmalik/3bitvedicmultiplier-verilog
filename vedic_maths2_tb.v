@@ -1,23 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    08:59:45 07/02/2019 
-// Design Name: 
-// Module Name:    vedic_maths2_tb 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+//THIS IS CODE FOR TESTBENCH OF VEDIC MULTIPLIER
 module vedic_maths2_tb(a,b,ans);
 
 	//Inputs
@@ -28,15 +10,13 @@ module vedic_maths2_tb(a,b,ans);
 	// Outputs
 	input wire [5:0] ans;
 	// Instantiate the Unit Under Test (UUT)
-	vedic_maths2 v1(
-		.a(a), 
-		.b(b), 
-		.ans(ans)
-	);
+	vedic_maths2 v1(.a(a), .b(b), .ans(ans));// IN THIS LINE I HAVE MAPPED TB VARIABLES TO VEDIC MATHS PORTS
 initial
 	begin
-		$monitor("ANS=%d	INPUTS A=%d	B=%d", ans, a, b);
+		$monitor("ANS=%d	INPUTS A=%d	B=%d", ans, a, b);// THIS LINE PRINTS WHENEVER THERE IS A CHANGE IN VALUES OF ANS,A,B
 	end
+
+//INPUTS FOR TESTING ARE GIVEN BELOW
 initial 
 	begin
 	a1=3'd1;
